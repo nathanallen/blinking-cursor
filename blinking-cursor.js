@@ -1,14 +1,13 @@
-function recursiveBlinkingCursor(elem){
-  $elem = elem || $('#blinking-cursor')
-  setTimeout(function(){
-    $elem.attr("style", "visibility:hidden");
+function blinkingCursor(elem){
+  elem = elem || document.querySelector('#blinking-cursor')
+  setInterval(function(){
+    elem.style.visibility = 'hidden'
     setTimeout(function(){
-      $elem.attr("style", "visibility:true");
-      recursiveBlinkingCursor($elem)
+      elem.style.visibility = ''
     }, 600)
-  }, 600)
+  }, 1200)
 }
 
-$('document').ready(function() {
-  recursiveBlinkingCursor()
-});
+window.onload = function(){
+  blinkingCursor()
+}

@@ -1,5 +1,5 @@
 function blinkingCursor(elem){
-  elem = elem || document.querySelector('#blinking-cursor')
+  var elem = elem || document.querySelector('#blinking-cursor')
   setInterval(function(){
     elem.style.visibility = 'hidden'
     setTimeout(function(){

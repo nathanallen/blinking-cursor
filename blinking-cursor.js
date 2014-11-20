@@ -1,5 +1,5 @@
-function blinkingCursor(elem){
-  var elem = elem || document.querySelector('#blinking-cursor')
+function blinkingCursor(){
+  var elem = document.querySelector('#blinking-cursor-js')
   setInterval(function(){
     elem.style.visibility = 'hidden'
     setTimeout(function(){
@@ -8,6 +8,4 @@ function blinkingCursor(elem){
   }, 1200)
 }
 
-window.onload = function(){
-  blinkingCursor()
-}
+window.onload = blinkingCursor

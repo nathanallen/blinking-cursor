@@ -1,0 +1,15 @@
+/*http://stackoverflow.com/questions/13955163/imitating-a-blink-tag-with-css3-animations*/
+/*https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_animations*/
+
+#blinking-cursor-css {
+  animation: blink 1200ms steps(1) infinite;
+  -webkit-animation: blink 1200ms steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { visibility: hidden; }
+}
+
+@-webkit-keyframes blink {
+  50% { visibility: hidden; }
+}
